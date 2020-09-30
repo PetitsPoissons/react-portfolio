@@ -106,7 +106,7 @@ a:hover {
 }
 
 header {
-  background: var(--dark);
+  background-color: var(--dark);
   padding: 20px 0;
   align-items: center;
   justify-content: space-between;
@@ -162,9 +162,25 @@ nav a:hover {
   text-shadow: 1px 1px 2px var(--light);
 }
 
+img {
+  max-width: 100%;
+}
+
+.img-thumbnail {
+  width: auto;
+  height: 300px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
 .flex-row {
   display: flex;
   flex-wrap: wrap;
+}
+
+.mx-1 {
+  margin-right: var(--spacing-one);
+  margin-left: var(--spacing-one);
 }
 
 .mx-2 {
