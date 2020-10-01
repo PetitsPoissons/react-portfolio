@@ -9,8 +9,8 @@
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
   --spacing-five: calc(2.5rem);
-  --orange1: #ffc515;
-  --red3: #cf1f3e;
+  --orange: #ffc515;
+  --red: #cf1f3e;
   --blue1: #69cdec;
   --blue2: #3a91cf;
 }
@@ -162,8 +162,9 @@ nav a:hover {
   text-shadow: 1px 1px 2px var(--light);
 }
 
-.navActive {
-  color: var(--secondary);
+.navActive a {
+  font-weight: bold;
+  text-shadow: 1px 1px 2px var(--light);
 }
 
 img {

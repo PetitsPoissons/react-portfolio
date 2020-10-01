@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 // import components
+import Header from './components/Header';
 import About from './components/About';
-import Nav from './components/Nav';
-import Portfolio from './components/Portfolio';
+import Project from './components/Project';
 import ContactForm from './components/Contact';
 
 function App() {
@@ -26,12 +26,12 @@ function App() {
       short: 'resume',
     },
   ]);
-  const [currentNavItem, setCurrentNavItem] = useState(navItems[0]);
+  const [currentNavItem, setCurrentNavItem] = useState('home');
 
   function displayComponent(navName) {
     switch (navName) {
       case 'Portfolio':
-        return <Portfolio></Portfolio>;
+        return <Project></Project>;
       case 'Contact':
         return <ContactForm></ContactForm>;
       default:
@@ -40,11 +40,11 @@ function App() {
   }
   return (
     <div className="App">
-      <Nav
+      <Header
         navItems={navItems}
         setCurrentNavItem={setCurrentNavItem}
         currentNavItem={currentNavItem}
-      ></Nav>
+      ></Header>
       <main>{displayComponent(currentNavItem.name)}</main>
     </div>
   );

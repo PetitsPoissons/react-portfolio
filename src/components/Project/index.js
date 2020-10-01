@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Portfolio() {
+function Project() {
   const [projects] = useState([
     {
       name: 'whr',
@@ -62,4 +62,4 @@ function Portfolio() {
   );
 }
 
-export default Portfolio;
+export default Project;
