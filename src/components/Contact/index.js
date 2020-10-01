@@ -10,11 +10,14 @@ function ContactForm() {
   function handleChange(e) {
     setFormState({ ...formState, [e.target.name]: e.target.value });
   }
-  console.log(formState);
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(formState);
+  }
   return (
     <section>
       <h1>Contact me</h1>
-      <form id="contact-form">
+      <form id="contact-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>
           <input
