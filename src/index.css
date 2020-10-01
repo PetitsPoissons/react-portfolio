@@ -162,6 +162,10 @@ nav a:hover {
   text-shadow: 1px 1px 2px var(--light);
 }
 
+.navActive {
+  color: var(--secondary);
+}
+
 img {
   max-width: 100%;
 }

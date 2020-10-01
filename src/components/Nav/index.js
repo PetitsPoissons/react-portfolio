@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-function Nav() {
+function Nav(props) {
+  const { navItems = [], setCurrentNavItem, currentNavItem } = props;
+  useEffect(() => {
+    document.title = currentNavItem.name;
+  }, [currentNavItem]);
+
   return (
     <header>
       <div className="flex-row">
@@ -9,18 +14,23 @@ function Nav() {
         </h1>
         <nav>
           <ul className="flex-row">
-            <li className="mx-2">
-              <a href="#about">About me</a>
-            </li>
-            <li className="mx-2">
-              <a href="#portfolio">Portfolio</a>
-            </li>
-            <li className="mx-2">
-              <a href="#contact">Contact</a>
-            </li>
-            <li className="mx-2">
-              <a href="#resume">Resume</a>
-            </li>
+            {navItems.map((navItem) => (
+              <li
+                className={`mx-2 ${
+                  currentNavItem.name === navItem.name && 'navActive'
+                }`}
+                key={navItem.short}
+              >
+                <a
+                  href={`#${navItem.short}`}
+                  onClick={() => {
+                    setCurrentNavItem(navItem);
+                  }}
+                >
+                  {navItem.name}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
