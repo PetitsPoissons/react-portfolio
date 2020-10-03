@@ -8,6 +8,8 @@
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
+  --spacing-three: calc(1rem * 1.5);
+  --spacing-four: calc(1rem * 2);
   --spacing-five: calc(2.5rem);
   --orange: #ffc515;
   --red: #cf1f3e;
@@ -142,24 +144,24 @@ header a {
   color: var(--light);
 }
 
-nav ul {
+.nav {
   justify-content: space-around;
   align-items: right;
   list-style: none;
   padding-right: 15px;
 }
 
-nav a {
+.nav-link {
   font-size: 1.6vw;
   font-weight: normal;
   margin: 0 15px;
 }
 
-nav a:hover {
+.nav-link:hover {
   text-shadow: 1px 1px 2px var(--light);
 }
 
-.navActive a {
+.navActive {
   font-weight: bold;
   text-shadow: 1px 1px 2px var(--light);
 }
@@ -175,6 +177,215 @@ img {
   cursor: pointer;
 }
 
+.wrapper {
+  padding-top: 50px;
+  background: #eceff1;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px;
+  justify-content: space-around;
+  align-content: flex-start;
+  overflow: auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+  height: 325px;
+  margin: 1rem;
+  position: relative;
+  width: 400px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
+}
+
+.card > .img-container {
+  height: 60%;
+  overflow: hidden;
+  text-align: center;
+  /*background: #6caddc;*/
+}
+.card > .img-container > img {
+  width: 100%;
+}
+
+.card > .content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 15px;
+}
+
+.card > .content > ul {
+  list-style-type: none;
+}
+
+.card > .content > ul > li {
+  margin-top: 18px;
+}
+
+/* styles for the About me section */
+.jumbotron {
+  background-image: url('./assets/images/bg_microchip.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.jumbotron .container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.jumbo-content {
+  justify-content: space-between;
+}
+
+.greeting {
+  justify-content: center;
+  width: 20vw;
+}
+
+.greeting-img {
+  height: 35vh;
+  background-image: url(./assets/images/pic_sandrine.jpg);
+  background-size: cover;
+  background-position: center;
+  /* display: flex; */
+  align-items: flex-end;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--light);
+  box-shadow: 1px 1px 20px black;
+}
+
+.greeting-img::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(45, 45, 45, 0.4));
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.greeting-img::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0), var(--dark));
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.div-langues .langues {
+  width: 100%;
+  font-size: 2.5vw;
+  text-shadow: 1px 1px 2px var(--light);
+  z-index: 1000;
+  position: relative;
+  top: 220px;
+}
+
+.hello {
+  font-weight: normal;
+  color: var(--red);
+  text-align: left;
+  transition: 0.6s;
+}
+
+.hola {
+  font-weight: lighter;
+  color: var(--secondary);
+  text-align: right;
+  transition: 0.8s;
+}
+
+.bonjour {
+  font-weight: lighter;
+  color: var(--blue2);
+  text-align: left;
+  padding-left: 1vw;
+  transition: 1s;
+}
+
+.greeting:hover .greeting-img::after {
+  opacity: 1;
+}
+
+.greeting:hover .greeting-img .hello {
+  transform: translate(0, -155px);
+}
+
+.greeting:hover .greeting-img .hola {
+  transform: translate(0, -153px);
+}
+
+.greeting:hover .greeting-img .bonjour {
+  transform: translate(0, -150px);
+}
+
+.jumbo-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.jumbo-title-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.jumbo-title h3 {
+  width: 50vw;
+  text-align: right;
+  font-size: 4vw;
+  font-weight: normal;
+  padding-right: 10px;
+  background-color: rgba(45, 45, 45, 0.8);
+  text-shadow: 1px 1px 2px white;
+  box-shadow: 1px 5px 10px black;
+}
+
+.jumbo-title-2 h3 {
+  margin-top: 4vh;
+}
+
+#webdev {
+  color: var(--orange);
+  transition: 1s;
+}
+
+#datanal {
+  color: var(--blue1);
+  transition: 2s;
+}
+
+#and {
+  color: var(--light);
+  transition: 0.1s;
+  margin-right: 4vh;
+}
+
+#viz {
+  color: var(--blue2);
+  transition: 2s;
+}
+
+/* utility */
 .flex-row {
   display: flex;
   flex-wrap: wrap;
@@ -190,12 +401,48 @@ img {
   margin-left: var(--spacing-two);
 }
 
+.mx-3 {
+  margin-right: var(--spacing-three);
+  margin-left: var(--spacing-three);
+}
+
+.mx-4 {
+  margin-right: var(--spacing-four);
+  margin-left: var(--spacing-four);
+}
+
+.mx-5 {
+  margin-right: var(--spacing-five);
+  margin-left: var(--spacing-five);
+}
+
+.my-1 {
+  margin-top: var(--spacing-one);
+  margin-bottom: var(--spacing-one);
+}
+
 .my-2 {
   margin-top: var(--spacing-two);
   margin-bottom: var(--spacing-two);
 }
 
+.my-3 {
+  margin-top: var(--spacing-three);
+  margin-bottom: var(--spacing-three);
+}
+
+.my-4 {
+  margin-top: var(--spacing-four);
+  margin-bottom: var(--spacing-four);
+}
+
 .my-5 {
   margin-top: var(--spacing-five);
   margin-bottom: var(--spacing-five);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

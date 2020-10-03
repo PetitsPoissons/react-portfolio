@@ -8,6 +8,8 @@ function Project() {
       description: 'Data Visualization',
       technologies: 'd3.js | leaflet.js | geojson | python | pandas',
       image: 'screen-shot-whr.png',
+      app: '',
+      repo: '',
     },
     {
       name: 'covie',
@@ -47,17 +49,35 @@ function Project() {
     },
   ]);
   return (
-    <div>
-      <div className="flex-row">
-        {projects.map((project) => (
-          <img
-            src={require(`../../assets/images/portfolio/${project.image}`)}
-            alt={project.title}
-            className="img-thumbnail mx-1"
-            key={project.name}
-          />
-        ))}
-      </div>
+    <div className="wrapper">
+      {projects.map((project) => (
+        <div className="card">
+          <div className="img-container">
+            <img
+              src={require(`../../assets/images/portfolio/${project.image}`)}
+              alt={project.title}
+              className="img-thumbnail"
+              key={project.name}
+            />
+          </div>
+          <div className="content">
+            <ul>
+              <li>
+                <strong>Title:</strong> {project.name}
+              </li>
+              <li>
+                <strong>Technologies:</strong> {project.technologies}
+              </li>
+              {/* <li>
+                <strong>Deployed App:</strong> {project.location}
+              </li>
+              <li>
+                <strong>Repo:</strong> {project.location}
+              </li> */}
+            </ul>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
