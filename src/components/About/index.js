@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Animated } from 'react-animated-css';
 
 function About() {
   return (
@@ -24,13 +25,32 @@ function About() {
           <Col className="center">
             <div className="jumbo-title">
               <div className="jumbo-title-1">
-                <h3 id="webdev">Web Development</h3>
+                <Animated
+                  animationIn="lightSpeedIn"
+                  animationInDuration={1000}
+                  isVisible={true}
+                >
+                  <h3 id="webdev">Web Development</h3>
+                </Animated>
               </div>
               <div className="jumbo-title-2">
-                <h3 id="datanal">Data Analysis</h3>
-                <h3 id="viz">
-                  <span id="and">&amp;</span>Visualization
-                </h3>
+                <Animated
+                  animationIn="zoomInDown"
+                  animationInDuration={2500}
+                  isVisible={true}
+                >
+                  <h3 id="datanal">Data Analysis</h3>
+                </Animated>
+                <Animated
+                  animationIn="zoomInDown"
+                  animationInDuration={4000}
+                  isVisible={true}
+                >
+                  <h3 id="viz">
+                    <span id="and">&amp;</span>
+                    Visualization
+                  </h3>
+                </Animated>
               </div>
             </div>
           </Col>
