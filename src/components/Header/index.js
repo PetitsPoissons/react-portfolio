@@ -5,7 +5,7 @@ function Header(props) {
   const { navItems = [], setCurrentNavItem, currentNavItem } = props;
 
   return (
-    <header>
+    <header className="vw-100 m-0 p-0">
       <div className="flex-row">
         <h1>
           <a href="/">Sandrine Poissonnet</a>

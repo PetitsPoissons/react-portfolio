@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer>
+    <footer className="vw-100 m-0 p-0">
       <div className="flex-row">
         <div className="github">
           <a

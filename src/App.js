@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Container from 'react-bootstrap/Container';
 import Header from './components/Header';
 import About from './components/About';
 import Project from './components/Project';
@@ -41,15 +40,17 @@ function App() {
     }
   }
   return (
-    <Container fluid>
+    <div className="container-fluid m-0 p-0">
       <Header
         navItems={navItems}
         setCurrentNavItem={setCurrentNavItem}
         currentNavItem={currentNavItem}
       ></Header>
-      <main>{displayComponent(currentNavItem.name)}</main>
+      <main className="vw-100 m-0 p-0">
+        {displayComponent(currentNavItem.name)}
+      </main>
       <Footer></Footer>
-    </Container>
+    </div>
   );
 }
 
