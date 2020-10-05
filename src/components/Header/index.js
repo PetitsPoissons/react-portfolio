@@ -5,8 +5,8 @@ function Header(props) {
   const { navItems = [], setCurrentNavItem, currentNavItem } = props;
 
   return (
-    <header className="vw-100 m-0 p-0">
-      <div className="flex-row">
+    <header className="vw-100 m-0 py-3 align-middle">
+      <div className="row d-flex flex-row">
         <h1>
           <a href="/">Sandrine Poissonnet</a>
         </h1>
