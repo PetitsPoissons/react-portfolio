@@ -559,6 +559,13 @@ img {
   }
 }
 
+/* footer */
+i {
+  color: var(--red);
+  font-size: 2rem;
+  margin: 10px;
+}
+
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
   header h1 {

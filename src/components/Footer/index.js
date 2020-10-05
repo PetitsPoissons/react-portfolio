@@ -2,8 +2,8 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="vw-100 m-0 p-0">
-      <div className="flex-row">
+    <footer className="vw-100 py-3">
+      <div className="row d-flex flex-row justify-content-center">
         <div className="github">
           <a
             href="https://github.com/PetitsPoissons"
@@ -24,7 +24,7 @@ function Footer() {
         </div>
         <div className="slack">
           <a
-            href="https://www.linkedin.com/in/sandrinepoissonnet/"
+            href="https://stackoverflow.com/users/9760536/sandrine-p?tab=profile"
             target="_blank"
             rel="noopener noreferrer"
           >
