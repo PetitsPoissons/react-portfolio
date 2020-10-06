@@ -459,6 +459,33 @@ img {
   color: var(--dark);
 }
 
+/* styles for the Resume component */
+
+.resume-page {
+  background-color: rgba(45, 45, 45, 0.8);
+}
+
+.jquery {
+  background: var(--blue2);
+  border-radius: 2px;
+}
+
+.node {
+  background: var(--light);
+  border-radius: 10px;
+}
+
+.express {
+  background: greenyellow;
+  border-radius: 3px;
+}
+
+.mysql {
+  background: var(--blue2);
+  border-radius: 2px;
+  padding: 2px;
+}
+
 /* MEDIA QUERY FOR SCREENS 1700px WIDE OR MORE */
 @media screen and (min-width: 1700px) {
   .hero-title h3 {
