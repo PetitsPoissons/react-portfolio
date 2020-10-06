@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Nav from 'react-bootstrap/Nav';
 
 function Navigation(props) {
   const { navItems = [], setCurrentNavItem, currentNavItem } = props;
@@ -12,21 +11,23 @@ function Navigation(props) {
   }, [currentNavItem]);
 
   return (
-    <Nav className="flex-row" as="ul">
-      {navItems.map((navItem) => (
-        <Nav.Item as="li" className="mx-2" key={navItem.short}>
-          <Nav.Link
-            href={`#${navItem.short}`}
-            className={currentNavItem.name === navItem.name && 'navActive'}
-            onClick={() => {
-              setCurrentNavItem(navItem);
-            }}
-          >
-            {navItem.name}
-          </Nav.Link>
-        </Nav.Item>
-      ))}
-    </Nav>
+    <nav>
+      <ul className="d-flex flex-row mb-0 pb-0 pt-3">
+        {navItems.map((navItem) => (
+          <li className="mx-2" key={navItem.short}>
+            <a
+              href={`#${navItem.short}`}
+              className={currentNavItem.name === navItem.name && 'navActive'}
+              onClick={() => {
+                setCurrentNavItem(navItem);
+              }}
+            >
+              {navItem.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
 
